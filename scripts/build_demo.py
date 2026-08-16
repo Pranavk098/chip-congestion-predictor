@@ -29,7 +29,7 @@ aes = json.loads((DATA_DIR / "aes_samples.json").read_text())
 html = html.replace("__METRICS_JSON__", json.dumps(metrics))
 html = html.replace("__CIRCUITNET_SAMPLES__", json.dumps(circuitnet))
 html = html.replace("__AES_SAMPLES__", json.dumps(aes))
-html = html.replace("__REPO_URL__", "https://github.com/pranavk-4/chip-congestion-predictor")
+html = html.replace("__REPO_URL__", "https://github.com/Pranavk098/chip-congestion-predictor")
 
 OUT.write_text(html, encoding="utf-8")
 print(f"wrote {OUT} ({OUT.stat().st_size / 1024:.0f} KB)")
