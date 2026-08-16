@@ -1,6 +1,6 @@
 # CNN Congestion / DRC Hotspot Predictor
 
-**[Interactive demo &rarr;](https://Pranavk098.github.io/chip-congestion-predictor/)**
+**[Interactive demo &rarr;](https://pranavk098.github.io/chip-congestion-predictor/)**
 &mdash; real prediction data from the actual trained checkpoints, not mockups.
 
 **TL;DR:** predicts where a chip's detailed router will fail its design-rule
