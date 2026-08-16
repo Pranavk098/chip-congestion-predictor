@@ -1,0 +1,30 @@
+{
+  "circuitnet": {
+    "f1": 0.57, "precision": 0.60, "recall": 0.55,
+    "recall_top1": 0.614, "recall_top5": 0.633, "recall_top10": 0.655,
+    "n_samples": 96, "source": "Real CircuitNet Vortex GPU-core layouts (Chai et al., 2022), random held-out test split"
+  },
+  "architectures": [
+    {"name": "U-Net", "params": 1930145, "recall_top10_naive": 0.060, "recall_top10_weighted": 0.110, "folds": 4},
+    {"name": "Attention U-Net", "params": 1963194, "recall_top10_naive": 0.060, "recall_top10_weighted": 0.110, "folds": 4, "note": "reported result uses this architecture"},
+    {"name": "Bipartite GNN", "params": 42881, "recall_top10_naive": 0.225, "recall_top10_weighted": 0.192, "folds": 3}
+  ],
+  "gnn_vs_cnn_folds": [
+    {"design": "aes", "n_violations": 371, "cnn": 0.113, "gnn": 0.175},
+    {"design": "ibex", "n_violations": 80, "cnn": 0.125, "gnn": 0.250},
+    {"design": "jpeg", "n_violations": 16, "cnn": 0.000, "gnn": 0.250}
+  ],
+  "transfer_learning": {
+    "own_schema_scratch_weighted": 0.110,
+    "aligned_schema_scratch_weighted": 0.062,
+    "aligned_schema_pretrained_weighted": 0.085,
+    "verdict": "pretraining on CircuitNet did not help, on the statistically honest (violation-weighted) reading"
+  },
+  "designs": [
+    {"name": "gcd", "cells": 478, "violations": 0},
+    {"name": "aes", "cells": 18115, "violations": 323},
+    {"name": "ibex", "cells": 18886, "violations": 62},
+    {"name": "jpeg", "cells": 44837, "violations": 45},
+    {"name": "riscv32i", "cells": 7297, "violations": 2}
+  ]
+}
