@@ -1,0 +1,49 @@
+{
+  "folds": [
+    {
+      "test_design": "aes",
+      "train_designs": [
+        "gcd",
+        "ibex",
+        "jpeg",
+        "riscv32i"
+      ],
+      "n_positive_cells": 66,
+      "recall_at_top_1pct": 0.019417475908994675,
+      "recall_at_top_5pct": 0.10679611563682556,
+      "recall_at_top_10pct": 0.17475728690624237
+    },
+    {
+      "test_design": "ibex",
+      "train_designs": [
+        "gcd",
+        "aes",
+        "jpeg",
+        "riscv32i"
+      ],
+      "n_positive_cells": 11,
+      "recall_at_top_1pct": 0.0,
+      "recall_at_top_5pct": 0.05000000074505806,
+      "recall_at_top_10pct": 0.25
+    },
+    {
+      "test_design": "jpeg",
+      "train_designs": [
+        "gcd",
+        "aes",
+        "ibex",
+        "riscv32i"
+      ],
+      "n_positive_cells": 9,
+      "recall_at_top_1pct": 0.0,
+      "recall_at_top_5pct": 0.25,
+      "recall_at_top_10pct": 0.25
+    }
+  ],
+  "naive_mean_recall_at_top_1pct": 0.006472491969664891,
+  "weighted_mean_recall_at_top_1pct": 0.014901783837135448,
+  "naive_mean_recall_at_top_5pct": 0.13559870546062788,
+  "weighted_mean_recall_at_top_5pct": 0.11451794930495494,
+  "naive_mean_recall_at_top_10pct": 0.22491909563541412,
+  "weighted_mean_recall_at_top_10pct": 0.19225559227688369
+}
